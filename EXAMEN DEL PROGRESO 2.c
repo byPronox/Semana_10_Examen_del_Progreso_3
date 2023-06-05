@@ -36,5 +36,28 @@ int main()
         }
     }
 
+    int sumpromediopro[3][23];
+
+    int progresopromedio[3][23];
+
+    int progresopromediof[3][23];
+
+    int promedioprogreso1[3];
+
+    printf("\n");
+    printf("2.- El promedio de cada progreso es: \n");
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 23; j++)
+        {
+            sumpromediopro[i][j] = num[j][i] + sumpromediopro[i][j];
+
+            progresopromedio[i][j] = sumpromediopro[i][j] / 23;
+
+            promedioprogreso1[i] = progresopromedio[i][j];
+        }
+        printf("El promedio del progreso es %d es: %d\n", i, promedioprogreso1[i]);
+    }
+
     return 0;
 }
